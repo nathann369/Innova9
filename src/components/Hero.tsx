@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon } from 'lucide-react';
 
-const HERO_IMG = "/2de3d8c9-3b57-4a22-a8d5-55a7bd071e11.jpg";
+const HERO_IMG = `${import.meta.env.BASE_URL}2de3d8c9-3b57-4a22-a8d5-55a7bd071e11.jpg`;
 
 const CONTACT_DETAILS = [
   { label: 'Whatsapp', value: '+(234)7076193764', href: 'tel:+(234)7076193764' },

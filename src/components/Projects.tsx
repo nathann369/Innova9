@@ -1,7 +1,5 @@
 
 
-
-import React from 'react';
 import { Section } from './Section';
 import { Reveal } from './Reveal';
 import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
@@ -21,7 +19,7 @@ const PROJECTS: Project[] = [
   description:
   'An AI-powered job application assistant that analyzes resumes, tailors applications, and tracks progress in real time.',
   stack: ['React', 'Python', 'OpenAI API', 'PostgreSQL'],
-  image: "/9b1e319a-1015-4b3a-bdec-0dc0f34e04d8.jpg",
+  image: `${import.meta.env.BASE_URL}9b1e319a-1015-4b3a-bdec-0dc0f34e04d8.jpg`,
 
   demo: '#',
   github: '#'
@@ -31,7 +29,7 @@ const PROJECTS: Project[] = [
   description:
   'A corporate website and services platform for a global business consultancy, focused on clarity and conversion.',
   stack: ['ASP.NET Core', 'C#', 'SQL Server', 'Bootstrap'],
-  image: "/40c465a6-41f1-4807-a730-bdef4f54fe6f.jpg",
+  image: `${import.meta.env.BASE_URL}40c465a6-41f1-4807-a730-bdef4f54fe6f.jpg`,
 
   demo: '#',
   github: '#'
@@ -41,7 +39,7 @@ const PROJECTS: Project[] = [
   description:
   'A marketplace connecting farmers and buyers with listings, logistics, and a dual-sided dashboard.',
   stack: ['Django', 'React', 'PostgreSQL', 'REST APIs'],
-  image: "/7c31f2c5-a1d4-41ec-a8bc-4d143b69a1cc.jpg",
+  image: `${import.meta.env.BASE_URL}7c31f2c5-a1d4-41ec-a8bc-4d143b69a1cc.jpg`,
 
   demo: '#',
   github: '#'
@@ -51,7 +49,7 @@ const PROJECTS: Project[] = [
   description:
   'A scalable inventory platform with multi-warehouse tracking, role-based access, and analytics.',
   stack: ['ASP.NET Core', 'C#', 'SQL Server', 'Azure'],
-  image: "/506dd158-48d6-4eef-9bcc-421f1472949e.jpg",
+  image: `${import.meta.env.BASE_URL}506dd158-48d6-4eef-9bcc-421f1472949e.jpg`,
 
   demo: '#',
   github: '#'
@@ -61,7 +59,7 @@ const PROJECTS: Project[] = [
   description:
   'An AI-assisted support desk with live chat, ticket routing, a knowledge base, and agent analytics.',
   stack: ['React', 'Python', 'OpenAI API', 'Docker'],
-  image: "/9d9d5a7b-e108-49a8-bd77-e5117df31674.jpg",
+  image: `${import.meta.env.BASE_URL}9d9d5a7b-e108-49a8-bd77-e5117df31674.jpg`,
 
   demo: '#',
   github: '#'
@@ -71,7 +69,7 @@ const PROJECTS: Project[] = [
   description:
   'A modern, editorial corporate site with a bold hero, feature sections, and a fast, responsive layout.',
   stack: ['React', 'TypeScript', 'REST APIs', 'Azure'],
-  image: "/952c6a9e-67e2-4d01-9834-822d27b77a67.jpg",
+  image: `${import.meta.env.BASE_URL}952c6a9e-67e2-4d01-9834-822d27b77a67.jpg`,
 
   demo: '#',
   github: '#'

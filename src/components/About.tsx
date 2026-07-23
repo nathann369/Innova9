@@ -3,7 +3,7 @@
 import { Section } from './Section';
 import { Reveal } from './Reveal';
 
-const PORTRAIT = "/portfolioIMG.png";
+const PORTRAIT = `${import.meta.env.BASE_URL}portfolioIMG.png`;
 
 
 const SKILLS = [
