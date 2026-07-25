@@ -44,7 +44,7 @@ export function Contact() {
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-[#777777]">
                 Email
               </dt>
-              <dd className="mt-1 text-base text-white">ngeorge935@yahoo.com</dd>
+              <dd className="mt-1 text-base text-white">buildwithinnova@gmail.com</dd>
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-[#777777]">

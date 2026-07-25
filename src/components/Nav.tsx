@@ -1,18 +1,20 @@
 
-import  { useEffect, useState } from 'react';
-import { MenuIcon, XIcon } from 'lucide-react';
+import { useEffect, useState, Suspense, lazy } from 'react';
+import { Link } from 'react-router-dom';
+
+const MenuIcon = lazy(() => import('lucide-react').then((mod) => ({ default: mod.MenuIcon })));
+const XIcon = lazy(() => import('lucide-react').then((mod) => ({ default: mod.XIcon })));
 
 const LINKS = [
-{ label: 'Home', href: '#home' },
-{ label: ' Services', href: '#services' },
-{ label: 'About', href: '#about' },
-{ label: 'Projects', href: '#projects' },
-{ label: 'Pricing', href: '#pricing' },
-{ label: 'Contact', href: '#contact' },
-{ label: 'Courses', href: '#courses' },
-{ label: 'Shop', href: '#novomall' }
+  { label: 'Home', to: '/' },
+  { label: 'Services', to: { pathname: '/', hash: '#services' } },
+  { label: 'About', to: { pathname: '/', hash: '#about' } },
+  { label: 'Projects', to: { pathname: '/', hash: '#projects' } },
+  { label: 'Pricing', to: { pathname: '/', hash: '#pricing' } },
+  { label: 'Contact', to: { pathname: '/', hash: '#contact' } },
+  { label: 'Courses', to: '/courses' },
+  { label: 'Shop', to: { pathname: '/', hash: '#novomall' } },
 ];
-
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,28 +37,28 @@ export function Nav() {
         aria-label="Primary"
         className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="text-sm font-bold uppercase tracking-[0.2em] text-black">
           
            [INNOVA-9]
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-9 md:flex">
-          {LINKS.map((l) =>
-          <li key={l.href}>
-              <a
-              href={l.href}
-              className="text-sm font-medium text-[#555555] transition-colors hover:text-black">
-              
+          {LINKS.map((l) => (
+            <li key={l.label}>
+              <Link
+                to={l.to}
+                className="text-sm font-medium text-[#555555] transition-colors hover:text-black"
+              >
                 {l.label}
-              </a>
+              </Link>
             </li>
-          )}
+          ))}
         </ul>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden border border-black bg-black px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black md:inline-block">
           
           Start a Project
@@ -69,32 +71,34 @@ export function Nav() {
           aria-expanded={open}
           className="text-black md:hidden">
           
-          {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
+          <Suspense fallback={<span className="inline-block h-6 w-6" />}>
+            {open ? <XIcon size={24} /> : <MenuIcon size={24} />}
+          </Suspense>
         </button>
       </nav>
 
       {open &&
       <div className="border-t border-[#dddddd] bg-white md:hidden">
           <ul className="flex flex-col px-6 py-4">
-            {LINKS.map((l) =>
-          <li key={l.href}>
-                <a
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="block border-b border-[#eeeeee] py-4 text-base font-medium text-black">
-              
+            {LINKS.map((l) => (
+              <li key={l.label}>
+                <Link
+                  to={l.to}
+                  onClick={() => setOpen(false)}
+                  className="block border-b border-[#eeeeee] py-4 text-base font-medium text-black"
+                >
                   {l.label}
-                </a>
+                </Link>
               </li>
-          )}
+            ))}
             <li>
-              <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-4 block bg-black px-5 py-3 text-center text-base font-semibold text-white">
-              
+              <Link
+                to={{ pathname: '/', hash: '#contact' }}
+                onClick={() => setOpen(false)}
+                className="mt-4 block bg-black px-5 py-3 text-center text-base font-semibold text-white"
+              >
                 Hire Me
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
