@@ -47,9 +47,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 max-w-xl text-lg leading-relaxed text-[#555555]">
             
-            We help individual, startups, businesses, and organizations build modern websites,
+            We help individual, startups, businesses, and organizations build modern scalable, and 
             enterprise software, AI-powered applications, automation systems, and
-            scalable digital products. We also provide Training and workshops for teams and individuals to help them improve their skills and knowledge in software development, AI, and automation.
+            reliable digital products. We also provide Training and workshops for teams and individuals to helping improve  skills and knowledge.
           </motion.p>
 
           <motion.div

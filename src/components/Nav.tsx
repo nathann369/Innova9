@@ -8,7 +8,10 @@ const LINKS = [
 { label: 'About', href: '#about' },
 { label: 'Projects', href: '#projects' },
 { label: 'Pricing', href: '#pricing' },
-{ label: 'Contact', href: '#contact' }];
+{ label: 'Contact', href: '#contact' },
+{ label: 'Courses', href: '#courses' },
+{ label: 'Shop', href: '#novomall' }
+];
 
 
 export function Nav() {

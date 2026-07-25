@@ -10,6 +10,8 @@ import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { NigeriaPromoPopup } from './components/NigeriaPromoPopup';
+
 
 export function App() {
   return (
@@ -27,6 +29,7 @@ export function App() {
         <Contact />
       </main>
       <Footer />
+      <NigeriaPromoPopup />
     </div>);
 
 }
