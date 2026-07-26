@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 const MenuIcon = lazy(() => import('lucide-react').then((mod) => ({ default: mod.MenuIcon })));
 const XIcon = lazy(() => import('lucide-react').then((mod) => ({ default: mod.XIcon })));
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: { pathname: '/', hash: '#services' } },
@@ -58,7 +60,7 @@ export function Nav() {
         </ul>
 
         <a
-          href="/#contact"
+          href={`${BASE_URL}#contact`}
           className="hidden border border-black bg-black px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-black md:inline-block">
           
           Start a Project

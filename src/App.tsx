@@ -27,7 +27,7 @@ function ScrollToHash() {
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="min-h-full w-full bg-white text-black">
         <Nav />
         <ScrollToHash />
