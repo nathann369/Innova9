@@ -6,10 +6,10 @@ import { ArrowRightIcon } from 'lucide-react';
 const HERO_IMG = `${import.meta.env.BASE_URL}2de3d8c9-3b57-4a22-a8d5-55a7bd071e11.jpg`;
 
 const CONTACT_DETAILS = [
-  { label: 'Whatsapp', value: '+(234)7076193764', href: 'tel:+(234)7076193764' },
-  { label: 'Email', value: 'ngeroge935@yahoo.com', href: 'mailto:hello@nathangeorge.dev' },
-  { label: 'Instagram', value: '@', href: 'https://www.instagram.com/' },
-  { label: 'X', value: '@', href: 'https://x.com/' },
+  { label: 'Whatsapp', value: '+(234) 8067444146', href: 'tel:+(234) 8067444146' },
+  { label: 'Email', value: 'buildwithinnova@gmail.com', href: 'mailto:buildwithinnova@gmail.com' },
+  { label: 'Instagram', value: '@buildwithinnova', href: 'https://www.instagram.com/' },
+  { label: 'X', value: '@buildwithinnova', href: 'https://x.com/' },
   { label: 'LinkedIn', value: 'linkedin.com/in/nathan-george-23a4611a2', href: 'https://www.linkedin.com/' }
 ];
 

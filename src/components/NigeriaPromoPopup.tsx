@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const WHATSAPP_NUMBER = '+2347076193764';
+const WHATSAPP_NUMBER = '+2348067444146';
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hello! I saw the special Nigerian pricing offer and would like to learn more.'
+  'Hello! NOVA, I would love to learn more about your services.'
 );
-const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=2347076193764&text=${WHATSAPP_MESSAGE}`;
+const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${WHATSAPP_MESSAGE}`;
 
 function looksLikeNigeria() {
   if (typeof navigator === 'undefined') {
@@ -103,11 +103,11 @@ export function NigeriaPromoPopup() {
               You are eligible for special local pricing on any of our services.
             </p>
             <p className="text-sm leading-7 text-slate-600">
-              Send us a WhatsApp message with your project idea, and I'll provide a customized quote within 24 hours.
+              Send us a WhatsApp message with your project idea, and I'll provide a customized quote within 24 hours. IN NAIRA
             </p>
             <div className="rounded-3xl bg-slate-50 p-4 text-sm text-slate-800 shadow-sm">
               <p className="font-semibold">Local Offer</p>
-              {/* <p className="mt-1 text-lg font-bold text-slate-900">From ₦250,000</p> */}
+              <p className="mt-1 text-lg font-bold text-slate-900">From ₦50,000</p>
               <p className="mt-1 text-slate-600">WhatsApp me now to lock in this local rate.</p>
             </div>
           </div>
